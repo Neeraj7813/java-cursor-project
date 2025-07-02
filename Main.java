@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    // Main method to start the program
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -10,11 +9,15 @@ public class Main {
         System.out.print("Enter your name: ");
         String name = sc.nextLine();
 
-        // Ask for user's age (new input added)
+        // Ask for user's age
         System.out.print("Enter your age: ");
         int age = sc.nextInt();
 
-        // Greet the user with name and age
-        System.out.println("Hello " + name + ", you are " + age + " years old!");
+        // Validate age
+        if (age <= 0) {
+            System.out.println("Invalid age entered. Please enter a positive number.");
+        } else {
+            System.out.println("Hello " + name + ", you are " + age + " years old!");
+        }
     }
 }
